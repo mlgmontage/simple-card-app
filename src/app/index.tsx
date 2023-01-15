@@ -1,0 +1,13 @@
+import "./styles/index.css";
+import { withProviders } from "./providers/with-providers";
+import Routing from "pages";
+
+const App = () => {
+  return (
+    <div>
+      <Routing />
+    </div>
+  );
+};
+
+export default withProviders(App);

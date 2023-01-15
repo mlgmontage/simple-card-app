@@ -1,0 +1,6 @@
+@import url("./base.css");
+
+:root {
+  --ff: Ubuntu, sans-serif;
+  --fz: 1rem;
+}
