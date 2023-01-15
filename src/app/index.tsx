@@ -4,7 +4,7 @@ import Routing from "pages";
 
 const App = () => {
   return (
-    <div>
+    <div className="container">
       <Routing />
     </div>
   );
