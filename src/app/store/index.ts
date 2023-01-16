@@ -1,13 +1,30 @@
-import { configureStore } from "@reduxjs/toolkit";
+import {
+  combineReducers,
+  configureStore,
+  getDefaultMiddleware,
+} from "@reduxjs/toolkit";
+// @ts-ignore
+import storage from "redux-persist/lib/storage";
 import { cardsReducer } from "entities/card/model/cards";
 import { decksReducer } from "entities/decks/model/decks";
 import { useSelector, useDispatch, TypedUseSelectorHook } from "react-redux";
+import { persistReducer } from "redux-persist";
+
+const rootReducer = combineReducers({
+  cards: cardsReducer,
+  decks: decksReducer,
+});
+
+const persistConfig = {
+  key: "root",
+  storage,
+};
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
-  reducer: {
-    cards: cardsReducer,
-    decks: decksReducer,
-  },
+  reducer: persistedReducer,
+  middleware: getDefaultMiddleware({ serializableCheck: false }),
   devTools: true,
 });
 
