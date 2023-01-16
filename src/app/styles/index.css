@@ -13,6 +13,8 @@
   --round-md: 0.5rem;
   --round-lg: 1rem;
 
+  --duration: 500ms;
+
   --gray-100: hsl(0, 0%, 90%);
   --gray-200: hsl(0, 0%, 80%);
   --gray-300: hsl(0, 0%, 70%);

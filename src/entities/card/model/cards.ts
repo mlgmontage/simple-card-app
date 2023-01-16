@@ -1,4 +1,4 @@
-import { createSelector, createSlice } from "@reduxjs/toolkit";
+import { createSelector, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "app/store";
 import { useSelector } from "react-redux";
 import { CardsInitial } from "./cards.types";
@@ -13,7 +13,7 @@ const initialState: CardsInitial = {
     },
     {
       id: "2",
-      category: "favorite",
+      category: "regular",
       deck: "draft",
       text: "Wie viel kostet ein Ausflug zu den Pyramiden?",
     },
@@ -30,8 +30,20 @@ const initialState: CardsInitial = {
 const cardsSlice = createSlice({
   name: "cards",
   initialState,
-  reducers: {},
+  reducers: {
+    toggle: (state, { payload }: PayloadAction<string>) => {
+      console.warn("he");
+
+      const id = state.list.findIndex((card) => card.id === payload);
+      if (id) {
+        state.list[id].category =
+          state.list[id].category === "favorite" ? "regular" : "favorite";
+      }
+    },
+  },
 });
+
+export const { toggle } = cardsSlice.actions;
 
 export const cardsSelector = (state: RootState) => state.cards.list;
 
