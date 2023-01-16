@@ -1,5 +1,6 @@
 import { useCard } from "entities/card";
 import { ToggleCard } from "features";
+import { RemoveCard } from "features/removeCard";
 import { useParams } from "react-router-dom";
 
 const CardView = () => {
@@ -11,7 +12,10 @@ const CardView = () => {
 
   return (
     <div>
-      <ToggleCard category={card.category} id={card.id} />
+      <div className="text-right">
+        <RemoveCard id={card.id} />{" "}
+        <ToggleCard category={card.category} id={card.id} />
+      </div>
 
       <h1 style={{ marginBlock: "100px" }} className="text-center">
         {card?.text}

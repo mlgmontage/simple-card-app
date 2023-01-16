@@ -13,10 +13,8 @@ export const ToggleCard: React.FC<Props> = ({ category, id }) => {
   const icon = category === "favorite" ? faHeart : faHeartBroken;
 
   return (
-    <div className="text-gray text-right">
-      <span onClick={() => dispatch(toggle(id))}>
-        <IconButton icon={icon} />
-      </span>
-    </div>
+    <span className="text-gray text-right" onClick={() => dispatch(toggle(id))}>
+      <IconButton icon={icon} />
+    </span>
   );
 };

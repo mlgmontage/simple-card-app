@@ -4,26 +4,7 @@ import { useSelector } from "react-redux";
 import { Card, CardsInitial } from "./cards.types";
 
 const initialState: CardsInitial = {
-  list: [
-    {
-      id: "1",
-      category: "favorite",
-      deck: "draft",
-      text: "Die Fahrt dauert 40 Minuten",
-    },
-    {
-      id: "2",
-      category: "regular",
-      deck: "draft",
-      text: "Wie viel kostet ein Ausflug zu den Pyramiden?",
-    },
-    {
-      id: "3",
-      category: "favorite",
-      deck: "draft",
-      text: "Ich brauche ein Einzelzimmer mit Dusche.",
-    },
-  ],
+  list: [],
   filters: {},
 };
 
@@ -43,10 +24,15 @@ const cardsSlice = createSlice({
     create: (state, { payload }: PayloadAction<Card>) => {
       state.list.push(payload);
     },
+    remove: (state, { payload }: PayloadAction<string>) => {
+      console.debug("Card removed", payload);
+      const id = state.list.findIndex((card) => card.id === payload);
+      state.list.splice(id, 1);
+    },
   },
 });
 
-export const { toggle, create } = cardsSlice.actions;
+export const { toggle, create, remove } = cardsSlice.actions;
 
 export const cardsSelector = (state: RootState) => state.cards.list;
 

@@ -45,7 +45,7 @@ const CreateCard = () => {
             </Field>
           </label>
 
-          <button>create</button>
+          <button type="submit">create</button>
         </Form>
       )}
     </Formik>
