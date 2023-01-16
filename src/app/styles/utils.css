@@ -2,6 +2,10 @@ div[class*="flex"] {
   display: flex;
 }
 
+.items-center {
+  align-items: center;
+}
+
 .gap-1 {
   gap: 1rem;
 }
