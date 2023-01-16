@@ -6,6 +6,10 @@ body {
   color: var(--gray-900);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 a {
   color: var(--gray-700);
 }
@@ -16,14 +20,44 @@ small {
 
 label {
   font-size: var(--fz-sm);
-  color: var(--gray-200);
+  color: var(--gray-500);
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+  color: inherit;
 }
 
 input,
 textarea {
-  font-family: inherit;
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  border: 1px solid var(--gray-200);
+  border-radius: var(--round);
 }
 
 button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
   cursor: pointer;
+
+  background-color: transparent;
+
+  border: 1px solid var(--gray-200);
+  border-radius: var(--round);
+}
+
+select {
+  display: block;
+  background-color: transparent;
+  padding: 0.3rem 1rem;
+  margin-bottom: 0.5rem;
+
+  border: 1px solid var(--gray-200);
+  border-radius: var(--round);
 }

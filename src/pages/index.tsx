@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import CardView from "./cardview";
+import CreateCard from "./createCard";
 import { Decks } from "./decks";
 import Favorites from "./favories";
 import { MenuLayout } from "./Layouts";
@@ -12,6 +13,7 @@ const Routing = () => {
         <Route path="" element={<Favorites />} />
         <Route path="/regular" element={<Regular />} />
         <Route path="/decks" element={<Decks />} />
+        <Route path="/create" element={<CreateCard />} />
         <Route path="/view/:id" element={<CardView />} />
       </Route>
     </Routes>

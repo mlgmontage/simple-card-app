@@ -25,3 +25,7 @@ div[class*="flex"] {
 .text-sm {
   font-size: var(--fz-sm);
 }
+
+.no-decoration {
+  text-decoration: none;
+}

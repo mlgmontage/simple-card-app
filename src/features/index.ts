@@ -1,1 +1,2 @@
-export * from "./toggleCard/toggleCard";
+export * from "./toggleCard";
+export * from "./addCard";
