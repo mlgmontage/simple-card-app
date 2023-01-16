@@ -25,7 +25,7 @@ type Props = {
 
 export const CardUI: React.FC<Props> = ({ card }) => {
   return (
-    <CardStyled to="/">
+    <CardStyled to={`/view/${card.id}`}>
       <span>{card.text}</span>
       <small className="text-gray">{card.deck}</small>
     </CardStyled>

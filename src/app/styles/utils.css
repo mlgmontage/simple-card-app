@@ -13,3 +13,15 @@ div[class*="flex"] {
 .text-gray {
   color: var(--gray-200);
 }
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-sm {
+  font-size: var(--fz-sm);
+}

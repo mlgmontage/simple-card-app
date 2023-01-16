@@ -13,3 +13,13 @@ a {
 small {
   font-size: var(--fz-sm);
 }
+
+label {
+  font-size: var(--fz-sm);
+  color: var(--gray-200);
+}
+
+input,
+textarea {
+  font-family: inherit;
+}

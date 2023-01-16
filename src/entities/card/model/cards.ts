@@ -1,5 +1,6 @@
 import { createSelector, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "app/store";
+import { useSelector } from "react-redux";
 import { CardsInitial } from "./cards.types";
 
 const initialState: CardsInitial = {
@@ -33,6 +34,13 @@ const cardsSlice = createSlice({
 });
 
 export const cardsSelector = (state: RootState) => state.cards.list;
+
+export const useCard = (cardId: string) =>
+  useSelector(
+    createSelector(cardsSelector, (cards) =>
+      cards.find((card) => card.id === cardId)
+    )
+  );
 
 export const favoritesSelector = createSelector(cardsSelector, (cards) =>
   cards.filter((card) => card.category === "favorite")
