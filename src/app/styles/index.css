@@ -4,6 +4,7 @@
 :root {
   --ff: Ubuntu, sans-serif;
 
+  --fz-sm: 0.8rem;
   --fz: 1rem;
   --fz-md: 1.2rem;
   --fz-lg: 2rem;

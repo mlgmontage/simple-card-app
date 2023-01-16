@@ -9,3 +9,7 @@ body {
 a {
   color: var(--gray-700);
 }
+
+small {
+  font-size: var(--fz-sm);
+}

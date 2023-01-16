@@ -9,3 +9,7 @@ div[class*="flex"] {
 .gap-1 {
   gap: 1rem;
 }
+
+.text-gray {
+  color: var(--gray-200);
+}

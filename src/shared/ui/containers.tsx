@@ -37,7 +37,7 @@ export const OpacityBox: React.FC<HTMLProps<HTMLDivElement>> = ({
   }, []);
 
   return (
-    <OpacityContainer style={{ opacity: visibility ? "1" : "0" }} {...props}>
+    <OpacityContainer {...props} style={{ opacity: visibility ? "1" : "0" }}>
       {children}
     </OpacityContainer>
   );

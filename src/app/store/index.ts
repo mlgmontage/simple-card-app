@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { cardsReducer } from "entities/card/model/cards";
+import { decksReducer } from "entities/decks/model/decks";
 import { useSelector, useDispatch, TypedUseSelectorHook } from "react-redux";
 
 export const store = configureStore({
   reducer: {
     cards: cardsReducer,
+    decks: decksReducer,
   },
   devTools: true,
 });

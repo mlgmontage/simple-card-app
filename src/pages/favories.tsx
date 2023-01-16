@@ -10,7 +10,7 @@ const Favorites = () => {
       <h1>Favories</h1>
       <CardGrid>
         {favorites.map((card) => (
-          <CardUI key={card.id}>{card.text}</CardUI>
+          <CardUI key={card.id} card={card} />
         ))}
       </CardGrid>
     </div>

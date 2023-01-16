@@ -1,7 +1,14 @@
 import styled from "@emotion/styled";
 import { PropsWithChildren } from "react";
+import { Link } from "react-router-dom";
+import { Card } from "../model/cards.types";
 
-const CardStyled = styled.div`
+const CardStyled = styled(Link)`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+
   padding: 1rem;
   height: 12rem;
 
@@ -12,6 +19,15 @@ const CardStyled = styled.div`
   border-radius: var(--round-md);
 `;
 
-export const CardUI: React.FC<PropsWithChildren> = ({ children }) => {
-  return <CardStyled>{children}</CardStyled>;
+type Props = {
+  card: Card;
+};
+
+export const CardUI: React.FC<Props> = ({ card }) => {
+  return (
+    <CardStyled to="/">
+      <span>{card.text}</span>
+      <small className="text-gray">{card.deck}</small>
+    </CardStyled>
+  );
 };
