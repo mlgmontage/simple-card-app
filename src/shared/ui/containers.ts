@@ -8,3 +8,9 @@ export const OpacityBox = styled.div`
     opacity: 1;
   }
 `;
+
+export const CardGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+`;
