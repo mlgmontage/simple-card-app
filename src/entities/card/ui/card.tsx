@@ -15,7 +15,7 @@ const CardStyled = styled(Link)`
   font-size: var(--fz-md);
 
   overflow: hidden;
-  border: 1px solid var(--gray-100);
+  border: 1px solid var(--gray-200);
   border-radius: var(--round-md);
 `;
 

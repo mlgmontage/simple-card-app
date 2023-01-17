@@ -2,6 +2,7 @@
 @import url("./utils.css");
 
 :root {
+  --bg: hsl(45, 26%, 91%);
   --ff: Ubuntu, sans-serif;
 
   --fz-sm: 0.8rem;

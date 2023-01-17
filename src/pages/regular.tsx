@@ -9,7 +9,7 @@ export const Regular = () => {
   return (
     <div>
       <h1>Regular</h1>
-      <div className="text-right">
+      <div className="text-right mb-1">
         <AddCard />
       </div>
       <CardGrid>
