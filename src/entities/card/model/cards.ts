@@ -22,7 +22,7 @@ const cardsSlice = createSlice({
       }
     },
     create: (state, { payload }: PayloadAction<Card>) => {
-      state.list.push(payload);
+      state.list.unshift(payload);
     },
     remove: (state, { payload }: PayloadAction<string>) => {
       console.debug("Card removed", payload);
